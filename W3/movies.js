@@ -1,7 +1,7 @@
 const axios = require('axios');
 const http = require('http');
 
-// Replace with your OMDb API key
+// Defining API key and query URL
 const apiKey = 'd24b9f5d';
 const baseUrl = `http://www.omdbapi.com/?apikey=${apiKey}`;
 
@@ -16,13 +16,16 @@ async function fetchMovies(searchQuery) {
   }
 }
 
+// Use environment port provided by Render, or default to 5000 for local testing
+const PORT = process.env.PORT || 5000;
+
 // Create a web server to display the movies in the browser
 http.createServer(async (req, res) => {
   if (req.url === '/favicon.ico') {
     res.writeHead(204);
     return res.end();
   }
-  
+
   res.writeHead(200, { 'Content-Type': 'text/html' });
   
   const searchQuery = 'star wars';  // You can change this to any movie search term
@@ -48,6 +51,6 @@ http.createServer(async (req, res) => {
   }
   
   res.end();
-}).listen(5000);
-
-console.log('Server running at http://localhost:5000/');
+}).listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
