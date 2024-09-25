@@ -47,5 +47,19 @@
     "country": "Sweden",
     "date": "Wed Sep 25 2024 14:54:02 GMT+0300 (Itä-Euroopan kesäaika)",
     "message": "This is an AJAX message."
+  },
+  {
+    "id": "1727268423643",
+    "username": "test",
+    "country": "US",
+    "date": "Wed Sep 25 2024 15:47:03 GMT+0300 (Itä-Euroopan kesäaika)",
+    "message": "This is a test."
+  },
+  {
+    "id": "1727268456019",
+    "username": "test2",
+    "country": "US",
+    "date": "Wed Sep 25 2024 15:47:36 GMT+0300 (Itä-Euroopan kesäaika)",
+    "message": "This is an AJAX test."
   }
 ]
