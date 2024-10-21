@@ -20,4 +20,4 @@ This is a simple REST API built with Node.js, Express, and MongoDB. It allows CR
 Use Postman or CURL to test the API endpoints.
 
 ## Deployment
-This API is deployed at: [Your deployed URL here]
+This API is deployed at: https://fullstack-rest-api.onrender.com/10000
