@@ -10,7 +10,7 @@ app.use(express.json());
 
 // Enable CORS for all requests or specify allowed origin
 app.use(cors({
-    origin: 'http://80.221.151.126:3000', // Replace with your frontend URL when deployed
+    origin: 'http://localhost:3000', // Replace with your frontend URL when deployed
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
     credentials: true // Allow cookies if needed
   }));
