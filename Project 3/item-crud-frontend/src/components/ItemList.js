@@ -1,26 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { getAllItems, deleteItem } from '../api';
+import React from 'react';
+import { deleteItem } from '../api';
 
-const ItemList = ({ onEdit }) => {
-    const [items, setItems] = useState([]);
-
-    useEffect(() => {
-        fetchItems();
-    }, []);
-
-    const fetchItems = async () => {
-        try {
-            const response = await getAllItems();
-            setItems(response.data);
-        } catch (error) {
-            console.error("Error fetching items:", error);
-        }
-    };
-
+const ItemList = ({ items, onEdit, onDelete }) => {
+    // Handle item deletion
     const handleDelete = async (id) => {
         try {
             await deleteItem(id);
-            fetchItems(); // Refresh item list
+            onDelete(id); // Notify the parent to update the list
         } catch (error) {
             console.error("Error deleting item:", error);
         }
